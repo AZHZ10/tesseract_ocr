@@ -1,6 +1,11 @@
 # Tesseract-OCR 한국어 학습
 
-[https://blog.kakaocdn.net/dn/5hl9g/btrDghCIr08/3uM3YaAwQNTv0VOk5KprR0/img.webp](https://blog.kakaocdn.net/dn/5hl9g/btrDghCIr08/3uM3YaAwQNTv0VOk5KprR0/img.webp)
+jTessBox/kor.trainddata 를 로컬 Tesseract-OCR/tessdata 폴더에 추가한다.
+이후 원하는 이미지(image_name.jpg)로 인식시킨다.
+```
+$ pytesseract -l kor "image_name.jpg"
+```
+
 
 ### OCR ?
 
@@ -8,7 +13,7 @@ Optical Character Recognition, 광학 문자 인식 이란 사람이 쓰거나 �
 
 우리 팀은 졸업 프로젝트로 메뉴판의 메뉴를 OCR로 인식하여 그 음식의 비건 여부를 알려줄 수 있는 비건 렌즈를 제작하고자 하였다. 그리고 이를 위해 많은 OCR 툴 중 오픈 소스이고, 현재 5.0까지 Google 개발자들에 의해 꾸준히 업데이트 되어온 Tesseract를 사용하게 되었다.
 
-하지만 Tesseract를 사용해본 결과, 뉴스 캡처와 같은 글씨는 잘 인식되지만 굴림체나 고딕체 이외의 폰트에서는 극악의 인식률을 보였다. 알파벳 각각을 하나씩 나열하는 영어와는 달리, 한글은 자음/모음을 각각 초성/중성/종성에 위치에 놓고 조합하는 방식이기 때문에 한글 인식률 자체가 그리 높지 않다고 한다. 우리는 이 모델의 인식률을 높이기 위해 새로운 폰트를 학습시키고자 하였다.
+하지만 Tesseract를 사용해본 결과, 뉴스 캡처와 같은 글씨는 잘 인식되지만 굴림체나 고딕체 이외의 폰트에서는 극악의 인식률을 보였다. 알파벳 각각을 하나씩 나열하는 영어와는 달리, 한글은 자음/모음을 각각 초성/중성/종성에 위치에 놓고 조합하는 방식이기 때문에 한글 인식률 자체가 그리 높지 않다고 한다. 이 모델의 인식률을 높이기 위해 새로운 폰트를 학습시키고자 하였다.
 
 ---
 
